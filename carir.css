@@ -1,0 +1,178 @@
+
+nav{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+.colapsebutton{
+    display: none;
+    visibility: hidden;
+    
+}
+.toggle{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 20px;
+    left: 15px;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 2px;
+    background-color:#fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.toggle .common{
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    background-color: #8000ff;
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+.toggle .top_line{
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+
+}
+.toggle .middle_line{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+
+}
+.toggle .bottom_line{
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+
+}
+input:checked ~ .toggle .top_line {
+
+    left: 2px;
+    top: 15px;
+    width: 25px;
+    transform: rotate(45deg);
+
+}
+input:checked ~ .toggle .bottom_line {
+
+    left: 2px;
+    top: 15px;
+    width: 25px;
+    transform: rotate(-45deg);
+
+}
+input:checked ~ .toggle .middle_line {
+
+    opacity: 0;
+    transform:translate(20px)
+
+}
+
+input:checked ~ .slide{
+    transform: translate(0);
+}
+
+.slide{
+ 
+    height: 30%;
+    width: 190px;
+    border-radius: 10px;
+    
+    top: 10%;
+    position: absolute;
+    background: linear-gradient(135deg, rgb(147, 22, 179), #00d4ff);
+
+    transition: 0.5s ease;
+    transform: translate(-190px);
+}
+.slide a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 20px;
+    font-size: 20px;
+}
+.slide a:hover{
+    color: rgb(5, 255, 117);
+}
+.slide ul li{
+list-style: none;
+}
+.slide ul li a i {
+    width: 40px;
+    text-align: center;
+}
+.container-fluid{
+    /* background-image: linear-gradient(to right, #0f2027, #203a43, #2c5364); */
+    color: white;
+    background-image: url(./assets/automotive-manufacturing-equipment.jpg);
+}
+p{
+    font-size: 20px;
+    font-family: sans-serif;
+}
+form{
+    background-color: grey;
+    padding: 10px;
+}
+.containers{
+    background: linear-gradient(135deg, rgb(147, 22, 179), #00d4ff);
+   
+    padding: 5px;
+   
+    border-radius: 10px;
+    color:#ffffff;
+
+}
+footer a {
+    text-decoration: none;
+}
+footer li {
+    list-style: none;
+   font-size: 20px;
+    display: flex;
+   
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+footer li:hover{
+    color: chartreuse;
+}
+footer{
+    color: white;
+    background-color: grey;
+}
+
+
+.left{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translate(-100%);
+    transition: all 1s;
+  
+}
+.right{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translate(50%);
+    transition: all 1s;
+
+}
+.revealing{
+    opacity: 1;
+    filter: blur(0px);
+    transform: translate(0%);
+}
+.reveal{
+    opacity: 1;
+    filter: blur(0px);
+    transform: translate(0);
+}
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
